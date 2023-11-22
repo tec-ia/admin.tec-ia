@@ -1,0 +1,1161 @@
+.mdf-item-height {
+    height: var(--app-items-height);
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*-----| Background color styles
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.mdf-bg-primary {
+    background-color: var(--app-primary-color) !important;
+}
+
+.mdf-bg-primary.bg-hover {
+    background-color: var(--app-hover-primary-color);
+}
+
+.mdf-bg-secondary {
+    background-color: var(--app-secondary-color);
+}
+
+.mdf-bg-secondary.bg-hover {
+    background-color: var(--app-hover-secondary-color);
+}
+
+.mdf-bg-content {
+    background-color: var(--app-content-color);
+}
+
+.mdf-bg-content.bg-hover {
+    background-color: var(--app-hover-content-color);
+}
+
+.mdf-bg-screen {
+    background-color: var(--app-screen-color);
+}
+
+.mdf-bg-screen.bg-hover {
+    background-color: var(--app-hover-screen-color);
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*-----| Font color styles
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.mdf-primary-ligth {
+    color: var(--app-primary-color-ligth);
+}
+
+.mdf-primary-dark {
+    color: var(--app-primary-color-dark);
+}
+
+.mdf-secondary-ligth {
+    color: var(--app-secondary-color-ligth);
+}
+
+.mdf-secondary-dark {
+    color: var(--app-secondary-color-dark);
+}
+
+.mdf-content-ligth {
+    color: var(--app-content-color-ligth);
+}
+
+.mdf-content-dark {
+    color: var(--app-content-color-dark);
+}
+
+.mdf-screen-ligth {
+    color: var(--app-screen-color-ligth);
+}
+
+.mdf-screen-dark {
+    color: var(--app-screen-color-dark);
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*-----| Flext content style
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.mdf-flex {
+    display: flex;
+}
+
+.mdf-justify-start {
+    justify-content: flex-start;
+}
+
+.mdf-justify-center {
+    justify-content: center;
+}
+
+.mdf-justify-end {
+    justify-content: flex-end;
+}
+
+.mdf-justify-between {
+    justify-content: space-between;
+}
+
+.mdf-align-start {
+    align-items: flex-start;
+}
+
+.mdf-align-center {
+    align-items: center;
+}
+
+.mdf-align-end {
+    align-items: flex-end;
+}
+
+.mdf-align-stretch {
+    align-items: stretch;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*-----| Grid content style
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.mdf-gap-xx {
+    gap: var(--app-space-xx);
+}
+
+.mdf-gap-xl {
+    gap: var(--app-space-xl);
+}
+
+.mdf-gap-lg {
+    gap: var(--app-space-lg);
+}
+
+.mdf-gap-md {
+    gap: var(--app-space-md);
+}
+
+.mdf-gap-sm {
+    gap: var(--app-space-sm);
+}
+
+.mdf-gap-xm {
+    gap: var(--app-space-xm);
+}
+
+.mdf-gap-nn {
+    gap: var(--app-space-nn);
+}
+
+.mdf-grid-xx {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(var(--app-grid-xx), 100%), 1fr));
+}
+
+.mdf-grid-xl {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(var(--app-grid-xl), 100%), 1fr));
+}
+
+.mdf-grid-lg {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(var(--app-grid-lg), 100%), 1fr));
+}
+
+.mdf-grid-md {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(var(--app-grid-md), 100%), 1fr));
+}
+
+.mdf-grid-sm {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(var(--app-grid-sm), 100%), 1fr));
+}
+
+.mdf-grid-xm {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(var(--app-grid-xm), 100%), 1fr));
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*-----| Height content styles
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.mdf-height-100 {
+    height: 100%;
+}
+
+.mdf-height-95 {
+    height: 95%;
+}
+
+.mdf-height-90 {
+    height: 90%;
+}
+
+.mdf-height-85 {
+    height: 85%;
+}
+
+.mdf-height-80 {
+    height: 80%;
+}
+
+.mdf-height-75 {
+    height: 75%;
+}
+
+.mdf-height-70 {
+    height: 70%;
+}
+
+.mdf-height-65 {
+    height: 65%;
+}
+
+.mdf-height-60 {
+    height: 60%;
+}
+
+.mdf-height-55 {
+    height: 55%;
+}
+
+.mdf-height-50 {
+    height: 50%;
+}
+
+.mdf-height-45 {
+    height: 45%;
+}
+
+.mdf-height-40 {
+    height: 40%;
+}
+
+.mdf-height-35 {
+    height: 35%;
+}
+
+.mdf-height-30 {
+    height: 30%;
+}
+
+.mdf-height-25 {
+    height: 25%;
+}
+
+.mdf-height-20 {
+    height: 20%;
+}
+
+.mdf-height-15 {
+    height: 15%;
+}
+
+.mdf-height-10 {
+    height: 10%;
+}
+
+.mdf-height-5 {
+    height: 5%;
+}
+
+.mdf-height-0 {
+    height: 0%;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*-----| Width content styles
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.mdf-width-100 {
+    width: 100%;
+}
+
+.mdf-width-95 {
+    width: 95%;
+}
+
+.mdf-width-90 {
+    width: 90%;
+}
+
+.mdf-width-85 {
+    width: 85%;
+}
+
+.mdf-width-80 {
+    width: 80%;
+}
+
+.mdf-width-75 {
+    width: 75%;
+}
+
+.mdf-width-70 {
+    width: 70%;
+}
+
+.mdf-width-65 {
+    width: 65%;
+}
+
+.mdf-width-60 {
+    width: 60%;
+}
+
+.mdf-width-55 {
+    width: 55%;
+}
+
+.mdf-width-50 {
+    width: 50%;
+}
+
+.mdf-width-45 {
+    width: 45%;
+}
+
+.mdf-width-40 {
+    width: 40%;
+}
+
+.mdf-width-35 {
+    width: 35%;
+}
+
+.mdf-width-30 {
+    width: 30%;
+}
+
+.mdf-width-25 {
+    width: 25%;
+}
+
+.mdf-width-20 {
+    width: 20%;
+}
+
+.mdf-width-15 {
+    width: 15%;
+}
+
+.mdf-width-10 {
+    width: 10%;
+}
+
+.mdf-width-5 {
+    width: 5%;
+}
+
+.mdf-width-0 {
+    width: 0%;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*-----| Padding content styles
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.mdf-padding-xx {
+    padding: var(--app-space-xx);
+}
+
+.mdf-paddingY-xx {
+    padding-top: var(--app-space-xx);
+    padding-bottom: var(--app-space-xx);
+}
+
+.mdf-paddingX-xx {
+    padding-left: var(--app-space-xx);
+    padding-right: var(--app-space-xx);
+}
+
+.mdf-paddingT-xx {
+    padding-top: var(--app-space-xx);
+}
+
+.mdf-paddingB-xx {
+    padding-bottom: var(--app-space-xx);
+}
+
+.mdf-paddingL-xx {
+    padding-left: var(--app-space-xx);
+}
+
+.mdf-paddingR-xx {
+    padding-right: var(--app-space-xx);
+}
+
+
+.mdf-padding-xl {
+    padding: var(--app-space-xl);
+}
+
+.mdf-paddingY-xl {
+    padding-top: var(--app-space-xl);
+    padding-bottom: var(--app-space-xl);
+}
+
+.mdf-paddingX-xl {
+    padding-left: var(--app-space-xl);
+    padding-right: var(--app-space-xl);
+}
+
+.mdf-paddingT-xl {
+    padding-top: var(--app-space-xl);
+}
+
+.mdf-paddingB-xl {
+    padding-bottom: var(--app-space-xl);
+}
+
+.mdf-paddingL-xl {
+    padding-left: var(--app-space-xl);
+}
+
+.mdf-paddingR-xl {
+    padding-right: var(--app-space-xl);
+}
+
+
+.mdf-padding-lg {
+    padding: var(--app-space-lg);
+}
+
+.mdf-paddingY-lg {
+    padding-top: var(--app-space-lg);
+    padding-bottom: var(--app-space-lg);
+}
+
+.mdf-paddingX-lg {
+    padding-left: var(--app-space-lg);
+    padding-right: var(--app-space-lg);
+}
+
+.mdf-paddingT-lg {
+    padding-top: var(--app-space-lg);
+}
+
+.mdf-paddingB-lg {
+    padding-bottom: var(--app-space-lg);
+}
+
+.mdf-paddingL-lg {
+    padding-left: var(--app-space-lg);
+}
+
+.mdf-paddingR-lg {
+    padding-right: var(--app-space-lg);
+}
+
+
+.mdf-padding-md {
+    padding: var(--app-space-md);
+}
+
+.mdf-paddingY-md {
+    padding-top: var(--app-space-md);
+    padding-bottom: var(--app-space-md);
+}
+
+.mdf-paddingX-md {
+    padding-left: var(--app-space-md);
+    padding-right: var(--app-space-md);
+}
+
+.mdf-paddingT-md {
+    padding-top: var(--app-space-md);
+}
+
+.mdf-paddingB-md {
+    padding-bottom: var(--app-space-md);
+}
+
+.mdf-paddingL-md {
+    padding-left: var(--app-space-md);
+}
+
+.mdf-paddingR-md {
+    padding-right: var(--app-space-md);
+}
+
+
+.mdf-padding-sm {
+    padding: var(--app-space-sm);
+}
+
+.mdf-paddingY-sm {
+    padding-top: var(--app-space-sm);
+    padding-bottom: var(--app-space-sm);
+}
+
+.mdf-paddingX-sm {
+    padding-left: var(--app-space-sm);
+    padding-right: var(--app-space-sm);
+}
+
+.mdf-paddingT-sm {
+    padding-top: var(--app-space-sm);
+}
+
+.mdf-paddingB-sm {
+    padding-bottom: var(--app-space-sm);
+}
+
+.mdf-paddingL-sm {
+    padding-left: var(--app-space-sm);
+}
+
+.mdf-paddingR-sm {
+    padding-right: var(--app-space-sm);
+}
+
+
+.mdf-padding-xm {
+    padding: var(--app-space-xm);
+}
+
+.mdf-paddingY-xm {
+    padding-top: var(--app-space-xm);
+    padding-bottom: var(--app-space-xm);
+}
+
+.mdf-paddingX-xm {
+    padding-left: var(--app-space-xm);
+    padding-right: var(--app-space-xm);
+}
+
+.mdf-paddingT-xm {
+    padding-top: var(--app-space-xm);
+}
+
+.mdf-paddingB-xm {
+    padding-bottom: var(--app-space-xm);
+}
+
+.mdf-paddingL-xm {
+    padding-left: var(--app-space-xm);
+}
+
+.mdf-paddingR-xm {
+    padding-right: var(--app-space-xm);
+}
+
+
+.mdf-padding-nn {
+    padding: var(--app-space-nn);
+}
+
+.mdf-paddingY-nn {
+    padding-top: var(--app-space-nn);
+    padding-bottom: var(--app-space-nn);
+}
+
+.mdf-paddingX-nn {
+    padding-left: var(--app-space-nn);
+    padding-right: var(--app-space-nn);
+}
+
+.mdf-paddingT-nn {
+    padding-top: var(--app-space-nn);
+}
+
+.mdf-paddingB-nn {
+    padding-bottom: var(--app-space-nn);
+}
+
+.mdf-paddingL-nn {
+    padding-left: var(--app-space-nn);
+}
+
+.mdf-paddingR-nn {
+    padding-right: var(--app-space-nn);
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*-----| Margin content styles
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.mdf-marginX-auto {
+    margin: auto;
+}
+
+.mdf-margin-xx {
+    margin: var(--app-space-xx);
+}
+
+.mdf-marginY-xx {
+    margin-top: var(--app-space-xx);
+    margin-bottom: var(--app-space-xx);
+}
+
+.mdf-marginX-xx {
+    margin-left: var(--app-space-xx);
+    margin-right: var(--app-space-xx);
+}
+
+.mdf-marginT-xx {
+    margin-top: var(--app-space-xx);
+}
+
+.mdf-marginB-xx {
+    margin-bottom: var(--app-space-xx);
+}
+
+.mdf-marginL-xx {
+    margin-left: var(--app-space-xx);
+}
+
+.mdf-marginR-xx {
+    margin-right: var(--app-space-xx);
+}
+
+
+.mdf-margin-xl {
+    margin: var(--app-space-xl);
+}
+
+.mdf-marginY-xl {
+    margin-top: var(--app-space-xl);
+    margin-bottom: var(--app-space-xl);
+}
+
+.mdf-marginX-xl {
+    margin-left: var(--app-space-xl);
+    margin-right: var(--app-space-xl);
+}
+
+.mdf-marginT-xl {
+    margin-top: var(--app-space-xl);
+}
+
+.mdf-marginB-xl {
+    margin-bottom: var(--app-space-xl);
+}
+
+.mdf-marginL-xl {
+    margin-left: var(--app-space-xl);
+}
+
+.mdf-marginR-xl {
+    margin-right: var(--app-space-xl);
+}
+
+
+.mdf-margin-lg {
+    margin: var(--app-space-lg);
+}
+
+.mdf-marginY-lg {
+    margin-top: var(--app-space-lg);
+    margin-bottom: var(--app-space-lg);
+}
+
+.mdf-marginX-lg {
+    margin-left: var(--app-space-lg);
+    margin-right: var(--app-space-lg);
+}
+
+.mdf-marginT-lg {
+    margin-top: var(--app-space-lg);
+}
+
+.mdf-marginB-lg {
+    margin-bottom: var(--app-space-lg);
+}
+
+.mdf-marginL-lg {
+    margin-left: var(--app-space-lg);
+}
+
+.mdf-marginR-lg {
+    margin-right: var(--app-space-lg);
+}
+
+
+.mdf-margin-md {
+    margin: var(--app-space-md);
+}
+
+.mdf-marginY-md {
+    margin-top: var(--app-space-md);
+    margin-bottom: var(--app-space-md);
+}
+
+.mdf-marginX-md {
+    margin-left: var(--app-space-md);
+    margin-right: var(--app-space-md);
+}
+
+.mdf-marginT-md {
+    margin-top: var(--app-space-md);
+}
+
+.mdf-marginB-md {
+    margin-bottom: var(--app-space-md);
+}
+
+.mdf-marginL-md {
+    margin-left: var(--app-space-md);
+}
+
+.mdf-marginR-md {
+    margin-right: var(--app-space-md);
+}
+
+
+.mdf-margin-sm {
+    margin: var(--app-space-sm);
+}
+
+.mdf-marginY-sm {
+    margin-top: var(--app-space-sm);
+    margin-bottom: var(--app-space-sm);
+}
+
+.mdf-marginX-sm {
+    margin-left: var(--app-space-sm);
+    margin-right: var(--app-space-sm);
+}
+
+.mdf-marginT-sm {
+    margin-top: var(--app-space-sm);
+}
+
+.mdf-marginB-sm {
+    margin-bottom: var(--app-space-sm);
+}
+
+.mdf-marginL-sm {
+    margin-left: var(--app-space-sm);
+}
+
+.mdf-marginR-sm {
+    margin-right: var(--app-space-sm);
+}
+
+
+.mdf-margin-xm {
+    margin: var(--app-space-xm);
+}
+
+.mdf-marginY-xm {
+    margin-top: var(--app-space-xm);
+    margin-bottom: var(--app-space-xm);
+}
+
+.mdf-marginX-xm {
+    margin-left: var(--app-space-xm);
+    margin-right: var(--app-space-xm);
+}
+
+.mdf-marginT-xm {
+    margin-top: var(--app-space-xm);
+}
+
+.mdf-marginB-xm {
+    margin-bottom: var(--app-space-xm);
+}
+
+.mdf-marginL-xm {
+    margin-left: var(--app-space-xm);
+}
+
+.mdf-marginR-xm {
+    margin-right: var(--app-space-xm);
+}
+
+
+.mdf-margin-nn {
+    margin: var(--app-space-nn);
+}
+
+.mdf-marginY-nn {
+    margin-top: var(--app-space-nn);
+    margin-bottom: var(--app-space-nn);
+}
+
+.mdf-marginX-nn {
+    margin-left: var(--app-space-nn);
+    margin-right: var(--app-space-nn);
+}
+
+.mdf-marginT-nn {
+    margin-top: var(--app-space-nn);
+}
+
+.mdf-marginB-nn {
+    margin-bottom: var(--app-space-nn);
+}
+
+.mdf-marginL-nn {
+    margin-left: var(--app-space-nn);
+}
+
+.mdf-marginR-nn {
+    margin-right: var(--app-space-nn);
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*-----| Border radius styles
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.mdf-border-primary {
+    border-color: var(--app-border-primary-color) !important;
+}
+
+.mdf-border-secondary {
+    border-color: var(--app-border-secondary-color) !important;
+}
+
+.mdf-border-content {
+    border-color: var(--app-border-content-color) !important;
+}
+
+.mdf-border-screen {
+    border-color: var(--app-border-screen-color) !important;
+}
+
+.mdf-border-xx {
+    border: solid var(--app-border-xx);
+}
+
+.mdf-borderY-xx {
+    border-top: solid var(--app-border-xx);
+    border-bottom: solid var(--app-border-xx);
+}
+
+.mdf-borderX-xx {
+    border-left: solid var(--app-border-xx);
+    border-right: solid var(--app-border-xx);
+}
+
+.mdf-borderT-xx {
+    border-top: solid var(--app-border-xx);
+}
+
+.mdf-borderB-xx {
+    border-bottom: solid var(--app-border-xx);
+}
+
+.mdf-borderL-xx {
+    border-left: solid var(--app-border-xx);
+}
+
+.mdf-borderR-xx {
+    border-right: solid var(--app-border-xx);
+}
+
+
+.mdf-border-xl {
+    border: solid var(--app-border-xl);
+}
+
+.mdf-borderY-xl {
+    border-top: solid var(--app-border-xl);
+    border-bottom: solid var(--app-border-xl);
+}
+
+.mdf-borderX-xl {
+    border-left: solid var(--app-border-xl);
+    border-right: solid var(--app-border-xl);
+}
+
+.mdf-borderT-xl {
+    border-top: solid var(--app-border-xl);
+}
+
+.mdf-borderB-xl {
+    border-bottom: solid var(--app-border-xl);
+}
+
+.mdf-borderL-xl {
+    border-left: solid var(--app-border-xl);
+}
+
+.mdf-borderR-xl {
+    border-right: solid var(--app-border-xl);
+}
+
+
+.mdf-border-lg {
+    border: solid var(--app-border-lg);
+}
+
+.mdf-borderY-lg {
+    border-top: solid var(--app-border-lg);
+    border-bottom: solid var(--app-border-lg);
+}
+
+.mdf-borderX-lg {
+    border-left: solid var(--app-border-lg);
+    border-right: solid var(--app-border-lg);
+}
+
+.mdf-borderT-lg {
+    border-top: solid var(--app-border-lg);
+}
+
+.mdf-borderB-lg {
+    border-bottom: solid var(--app-border-lg);
+}
+
+.mdf-borderL-lg {
+    border-left: solid var(--app-border-lg);
+}
+
+.mdf-borderR-lg {
+    border-right: solid var(--app-border-lg);
+}
+
+
+.mdf-border-md {
+    border: solid var(--app-border-md);
+}
+
+.mdf-borderY-md {
+    border-top: solid var(--app-border-md);
+    border-bottom: solid var(--app-border-md);
+}
+
+.mdf-borderX-md {
+    border-left: solid var(--app-border-md);
+    border-right: solid var(--app-border-md);
+}
+
+.mdf-borderT-md {
+    border-top: solid var(--app-border-md);
+}
+
+.mdf-borderB-md {
+    border-bottom: solid var(--app-border-md);
+}
+
+.mdf-borderL-md {
+    border-left: solid var(--app-border-md);
+}
+
+.mdf-borderR-md {
+    border-right: solid var(--app-border-md);
+}
+
+
+.mdf-border-sm {
+    border: solid var(--app-border-sm);
+}
+
+.mdf-borderY-sm {
+    border-top: solid var(--app-border-sm);
+    border-bottom: solid var(--app-border-sm);
+}
+
+.mdf-borderX-sm {
+    border-left: solid var(--app-border-sm);
+    border-right: solid var(--app-border-sm);
+}
+
+.mdf-borderT-sm {
+    border-top: solid var(--app-border-sm);
+}
+
+.mdf-borderB-sm {
+    border-bottom: solid var(--app-border-sm);
+}
+
+.mdf-borderL-sm {
+    border-left: solid var(--app-border-sm);
+}
+
+.mdf-borderR-sm {
+    border-right: solid var(--app-border-sm);
+}
+
+
+.mdf-border-xm {
+    border: solid var(--app-border-xm);
+}
+
+.mdf-borderY-xm {
+    border-top: solid var(--app-border-xm);
+    border-bottom: solid var(--app-border-xm);
+}
+
+.mdf-borderX-xm {
+    border-left: solid var(--app-border-xm);
+    border-right: solid var(--app-border-xm);
+}
+
+.mdf-borderT-xm {
+    border-top: solid var(--app-border-xm);
+}
+
+.mdf-borderB-xm {
+    border-bottom: solid var(--app-border-xm);
+}
+
+.mdf-borderL-xm {
+    border-left: solid var(--app-border-xm);
+}
+
+.mdf-borderR-xm {
+    border-right: solid var(--app-border-xm);
+}
+
+
+.mdf-border-nn {
+    border: solid var(--app-bordennxm);
+}
+
+.mdf-borderY-nn {
+    border-top: solid var(--app-border-nn);
+    border-bottom: solid var(--app-border-nn);
+}
+
+.mdf-borderX-nn {
+    border-left: solid var(--app-border-nn);
+    border-right: solid var(--app-border-nn);
+}
+
+.mdf-borderT-nn {
+    border-top: solid var(--app-border-nn);
+}
+
+.mdf-borderB-nn {
+    border-bottom: solid var(--app-border-nn);
+}
+
+.mdf-borderL-nn {
+    border-left: solid var(--app-border-nn);
+}
+
+.mdf-borderR-nn {
+    border-right: solid var(--app-border-nn);
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*-----| Border radius styles
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.mdf-rounded-xx {
+    border-radius: var(--app-rounded-xx);
+}
+
+.mdf-rounded-xl {
+    border-radius: var(--app-rounded-xl);
+}
+
+.mdf-rounded-lg {
+    border-radius: var(--app-rounded-lg);
+}
+
+.mdf-rounded-md {
+    border-radius: var(--app-rounded-md);
+}
+
+.mdf-rounded-sm {
+    border-radius: var(--app-rounded-sm);
+}
+
+.mdf-rounded-xm {
+    border-radius: var(--app-rounded-xm);
+}
+
+.mdf-rounded-nn {
+    border-radius: var(--app-rounded-nn);
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+/*-----| Font size styles
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.mdf-font-capitalize {
+    text-transform: capitalize;
+}
+
+.mdf-font-lowercase {
+    text-transform: lowercase;
+}
+
+.mdf-font-uppercase {
+    text-transform: uppercase;
+}
+
+.mdf-font-left {
+    text-align: right;
+}
+
+.mdf-font-right {
+    text-align: right;
+}
+
+.mdf-font-center {
+    text-align: center;
+}
+
+.mdf-font-justify {
+    text-align: justify;
+}
+
+.mdf-font-nowrap {
+    white-space: nowrap;
+}
+
+.mdf-font-900 {
+    font-weight: 900;
+}
+
+.mdf-font-800 {
+    font-weight: 800;
+}
+
+.mdf-font-700 {
+    font-weight: 700;
+}
+
+.mdf-font-600 {
+    font-weight: 600;
+}
+
+.mdf-font-500 {
+    font-weight: 500;
+}
+
+.mdf-font-400 {
+    font-weight: 400;
+}
+
+.mdf-font-300 {
+    font-weight: 300;
+}
+
+.mdf-font-200 {
+    font-weight: 200;
+}
+
+.mdf-font-100 {
+    font-weight: 100;
+}
+
+.mdf-font-xx {
+    font-size: var(--app-font-xx);
+}
+
+.mdf-font-xl {
+    font-size: var(--app-font-xl);
+}
+
+.mdf-font-lg {
+    font-size: var(--app-font-lg);
+}
+
+.mdf-font-md {
+    font-size: var(--app-font-md);
+}
+
+.mdf-font-sm {
+    font-size: var(--app-font-sm);
+}
+
+.mdf-font-xm {
+    font-size: var(--app-font-xm);
+}
