@@ -3,7 +3,9 @@ export const items = [
         category: "videovigilancia",
         url: "trabajo",
         name: "Trabajo de instalación (por cámara)",
-        cost: "208",
+        cost: "300",
+        defaultCost: true,
+        noExpenses: true,
     },
     {
         category: "videovigilancia",
@@ -256,35 +258,45 @@ export const items = [
     {
         category: "mantenimiento",
         url: "https://www.tec-ia.com/mantenimiento",
-        name: "Reparación de equipo",
+        name: "Reparación de fallas o daños en el equipo",
         cost: "500",
+        defaultCost: true,
+        noExpenses: true,
     },
     {
         category: "mantenimiento",
         url: "https://www.tec-ia.com/mantenimiento",
-        name: "Mantenimiento preventivo completo",
+        name: "Mantenimiento preventivo a componentes críticos",
         cost: "400",
+        defaultCost: true,
+        noExpenses: true,
     },
     {
         category: "mantenimiento",
         url: "https://www.tec-ia.com/mantenimiento",
-        name: "Respaldo de información",
+        name: "Respaldo de información completo",
         cost: "300",
+        defaultCost: true,
+        noExpenses: true,
     },
     {
         category: "mantenimiento",
         url: "https://www.tec-ia.com/mantenimiento",
-        name: "Reinstalación de sistema operativo",
+        name: "Reinstalación de sistema operativo (nueva)",
         cost: "600",
+        defaultCost: true,
+        noExpenses: true,
     },
     {
         category: "mantenimiento",
         url: "https://www.tec-ia.com/mantenimiento",
-        name: "Instalación de paquetería office",
+        name: "Instalación de paquetería office oficial",
         cost: "500",
+        defaultCost: true,
+        noExpenses: true,
     },
 ]
 
 export const config = {
-    percentage: 20
+    percentage: 25
 }

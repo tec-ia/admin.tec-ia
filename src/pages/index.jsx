@@ -1,23 +1,20 @@
-import { getItems } from "@/lib/service/items"
+import ItemService from "@/lib/service/items"
 
-import PDFGenerator, { create as getPdf } from "./components/PDFGenerator/PDFGenerator"
+import PDFTemplate from "./components/PDFTemplate/PDFTemplate"
 
-import { useState, useEffect } from "react"
-
+import { useState } from "react"
 import { Button } from 'primereact/button'
 import { Dialog } from 'primereact/dialog'
 import { DataTable } from 'primereact/datatable'
 import { Column } from 'primereact/column'
-
+import { InputText } from 'primereact/inputtext'
 import { FilterMatchMode } from 'primereact/api'
 
 export default function IndexPage() {
 
     // Toogle modal
     const [visible, setVisible] = useState(false)
-
-    // Selected products
-    const [selectedProducts, setSelectedProducts] = useState()
+    const [visible2, setVisible2] = useState(false)
 
     // Filtered results
     const [filters, setFilters] = useState({ global: { value: null, matchMode: FilterMatchMode.CONTAINS } })
@@ -33,73 +30,105 @@ export default function IndexPage() {
         setGlobalFilterValue(value)
     }
 
-    const items = getItems()
+    // Final currency format
+    const currencyFormat = (amount) => {
+        return new Intl.NumberFormat("en-IN", { maximumFractionDigits: 2, minimumFractionDigits: 2 }).format(amount)
+    }
+
+    //Getter for items
+    const items = ItemService.getItems()
+
+    // Selected products
+    const [selectedProducts, setSelectedProducts] = useState()
+    const [totalAmount, setTotalAmount] = useState(0)
+    const [totalInvestment, setTotalInvestment] = useState(0)
+
+    const cleanListedProducts = (list) => (
+        list?.map((item) => ({
+            category: item.category,
+            url: item.url,
+            name: item.name,
+            cost: item.cost,
+            price: item.price,
+        }))
+    )
+
+    const prepareForSale = (products) => {
+
+        let totalAmount = 0
+        let totalInvestment = 0
+
+        let list = []
+
+        list = products.map((item) => {
+
+            let quantity = item.quantity ? parseInt(item.quantity, 10) : 1
+            let amount = quantity * item.price
+
+            totalAmount = totalAmount + amount
+            totalInvestment = totalInvestment + item.cost
+
+            return {
+                quantity: quantity,
+                amount: amount,
+                category: item.category,
+                url: item.url,
+                name: item.name,
+                cost: item.cost,
+                price: item.price,
+            }
+
+        })
+
+        setTotalAmount(totalAmount)
+        setTotalInvestment(totalInvestment)
+        setSelectedProducts(list)
+
+    }
+
+    const onSelectedProducts = (products) => {
+        prepareForSale(products)
+    }
+
+    const onCellEditComplete = (e) => {
+        prepareForSale(selectedProducts)
+    }
+
+    const cellEditor = (options) => {
+        return <InputText type="number" className="p-inputtext-sm" value={options.value} onChange={(e) => options.editorCallback(e.target.value)} style={{ width: '80px' }} />
+    }
 
     return (
         <div>
-            <div className="mdf-flex mdf-justify-center mdf-marginB-xl mdf-gap-md">
+            <div className="mdf-flex mdf-justify-center mdf-marginB-xx mdf-gap-md" >
                 <Button onClick={() => setVisible(true)} className="mdf-item-height mdf-paddingX-md mdf-rounded-xx mdf-bg-content mdf-border-md mdf-border-content">Productos</Button>
-                <Button onClick={() => getPdf()} className="mdf-item-height mdf-paddingX-md mdf-rounded-xx mdf-bg-content mdf-border-md mdf-border-content">Descargar</Button>
+                <Button onClick={() => setVisible2(true)} className="mdf-item-height mdf-paddingX-md mdf-rounded-xx mdf-bg-content mdf-border-md mdf-border-content">Visualizar</Button>
             </div>
 
-            <PDFGenerator width={900} height={1100} marginX={40} marginY={35} >
-                <div className="mdf-flex mdf-justify-between mdf-gap-xx mdf-marginB-xx">
-                    <div className="mdf-flex mdf-gap-xx">
-                        <img src="/images/app-dark-icon.svg" alt="Logo Tec-IA" width={120} />
-                        <div>
-                            <h2 className="mdf-marginB-sm">Agencia Tec-IA</h2>
-                            <p>Ing. José Enrique Zempoaltecatl Moyotl</p>
-                            <p>Tel. (+52) 221 340 1464</p>
-                            <p>Correo: contacto@tec-ia.com</p>
-                            <p>Sitio web: www.tec-ia.com</p>
-                        </div>
-                    </div>
-                    <div className="mdf-font-right">
-                        <h2 className="mdf-marginB-sm">Detalle de cotización</h2>
-                        <p>12 de Febrero de 2023</p>
-                        <p>Fecha solicitud</p>
-                        <p>22 de Febrero de 2023</p>
-                        <p>Fecha vencimiento</p>
-                    </div>
-                </div>
+            <h3 className="mdf-font-400 mdf-marginB-sm">Ganancia: ${currencyFormat(totalAmount - totalInvestment)}</h3>
+            <p className="mdf-font-400 mdf-marginB-sm">Inversión: ${currencyFormat(totalInvestment)}</p>
+            <h3 className="mdf-font-400 mdf-marginB-xx">Monto total: ${currencyFormat(totalAmount)}</h3>
 
-                <div className="mdf-marginB-xx">
-                    <p className="mdf-marginB-sm mdf-font-600">Datos del cliente:</p>
-                    <p className="mdf-flex mdf-marginB-sm">Nombre: <input type="text" className="mdf-paddingX-md mdf-width-100" /></p>
-                    <p className="mdf-flex mdf-marginB-sm">Teléfono: <input type="tel" className="mdf-paddingX-md mdf-width-100" /></p>
-                    <p className="mdf-flex mdf-marginB-sm">Ubicación: <input type="text" className="mdf-paddingX-md mdf-width-100" /></p>
-                </div>
-
-                <DataTable value={selectedProducts} >
-                    <Column header="Cantidad" body="1" style={{ width: '10%' }} ></Column>
-                    <Column field="name" header="Name" style={{ width: '50%' }} ></Column>
-                    <Column field="cost" header="Precio" style={{ width: '15%' }} ></Column>
-                    <Column field="price" header="Monto" style={{ width: '15%' }} ></Column>
-                </DataTable>
-
-                <div className="mdf-marginB-xx mdf-font-right">
-                    <p className="mdf-marginB-sm">Monto caculado: $3,020.00</p>
-                    <h2>Total: $3,000.00</h2>
-                </div>
-
-                <div className="mdf-marginB-xx mdf-font-justify">
-                    <p className="mdf-marginB-sm mdf-font-600">Términos y condiciones:</p>
-                    <p className="mdf-marginB-sm">La presente cotización tiene como finalidad detallar el monto de los servicios y productos que usted adquiere así como el costo total que se requiere para cubrirlos en su totalidad.</p>
-                    <p className="mdf-marginB-sm">Todo trabajo requiere un anticipo del 70% para el inicio de las actividades correspondientes, 15 al avance del proyecto y el resto al finalizar las labores.</p>
-                    <p className="mdf-marginB-sm">El presente costo total está sujeto a cambios, siempre con previo aviso, ya que no nos hacemos responsables por actividades o productos no contempladas en este documento.</p>
-                    <p className="mdf-marginB-sm">Este presupuesto es válido siempre y cuando la aceptación del cliente se encuentre dentro del periodo establecido al inicio.</p>
-                </div>
-            </PDFGenerator>
+            <DataTable value={selectedProducts} emptyMessage="Selecciona los elementos que deseas" >
+                <Column field="quantity" header="Cantidad" editor={(options) => cellEditor(options)} onCellEditComplete={onCellEditComplete} style={{ width: '10%', textAlign: 'center' }} ></Column>
+                <Column field="name" header="Concepto" style={{ width: '60%' }} ></Column>
+                <Column field="price" header="Precio" style={{ width: '10%' }} ></Column>
+                <Column field="amount" header="Monto" style={{ width: '10%' }} ></Column>
+            </DataTable>
 
             <Dialog header="Listado de servicios" visible={visible} onHide={() => setVisible(false)} position="top" resizable={false} draggable={false} style={{ width: '95%', maxWidth: '1000px' }}>
                 <input type="text" value={globalFilterValue} onChange={onGlobalFilterChange} placeholder="Ingrese su búsqueda..." className="mdf-item-height mdf-paddingX-lg mdf-rounded-xx mdf-bg-screen mdf-width-80 mdf-marginB-xx" style={{ maxWidth: '500px' }} />
-                <DataTable value={items} selectionMode="checkbox" selection={selectedProducts} onSelectionChange={(e) => setSelectedProducts(e.value)} removableSort paginator rows={25} filters={filters} showGridlines >
+                <DataTable value={items} selectionMode="rowClick" selection={cleanListedProducts(selectedProducts)} onSelectionChange={(e) => onSelectedProducts(e.value)} removableSort paginator rows={25} filters={filters} showGridlines >
                     <Column selectionMode="multiple" headerStyle={{ width: '3rem' }}></Column>
                     <Column field="name" header="Name" sortable style={{ width: '50%' }} ></Column>
                     <Column field="category" header="Category" sortable style={{ width: '25%' }} ></Column>
                     <Column field="cost" header="Costo" sortable style={{ width: '15%' }} ></Column>
                     <Column field="price" header="Precio" sortable style={{ width: '15%' }} ></Column>
                 </DataTable>
+            </Dialog>
+
+            <Dialog header="Vista previa de PDF" visible={visible2} onHide={() => setVisible2(false)} position="top" resizable={false} draggable={false} maximizable={true} style={{ width: '95%', maxWidth: '1000px' }}>
+                <PDFTemplate items={selectedProducts} totalInvestment={totalInvestment} totalAmount={totalAmount} />
             </Dialog>
         </div>
     )

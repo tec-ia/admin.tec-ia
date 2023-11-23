@@ -1,24 +1,34 @@
 import { items, config } from "../store/items"
 
-export const getItems = () => {
+const ItemService = {
 
-    let list = []
+    getItems: () => {
 
-    list = items.map((item) => {
+        let list = []
 
-        let cost = parseInt(item.cost, 10)
-        let price = Math.round(cost + (cost * config.percentage / 100))
+        list = items.map((item) => {
 
-        return {
-            category: item.category,
-            url: item.url,
-            name: item.name,
-            cost: cost,
-            price: price,
-        }
+            let cost = parseInt(item.cost, 10)
+            let price = (item.defaultCost) ? cost : Math.round(cost + (cost * config.percentage / 100))
 
-    })
+            let realCost = (item.noExpenses ? 0 : (item.realCost ? parseInt(item.realCost, 10) : cost))
 
-    return list
+            return {
+                /*quantity: 1,
+                amount: price,*/
+                category: item.category,
+                url: item.url,
+                name: item.name,
+                cost: realCost,
+                price: price,
+            }
+
+        })
+
+        return list
+
+    },
 
 }
+
+export default ItemService

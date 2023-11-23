@@ -33,6 +33,14 @@
     background-color: var(--app-overlay-color);
 }
 
+.p-dialog-header-icons {
+    gap: 20px;
+}
+
+.p-dialog-maximized {
+    background-color: var(--app-content-color);
+}
+
 .p-dialog-default {
     margin-top: var(--app-space-xx);
     border-radius: var(--app-rounded-sm);
@@ -75,8 +83,12 @@
 .p-datatable-table th {
     white-space: nowrap;
     font-weight: normal;
-    padding-left: var(--app-space-lg);
-    padding-right: var(--app-space-lg);
+    padding-left: var(--app-space-md);
+    padding-right: var(--app-space-md);
+    height: calc(var(--app-items-height) + 10px);
+}
+
+.p-datatable-table td {
     height: calc(var(--app-items-height) + 10px);
 }
 
