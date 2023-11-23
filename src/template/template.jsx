@@ -10,7 +10,7 @@ export default function Template({ children }) {
                 </div>
             </nav>
 
-            <div className="document-wrapper mdf-bg-content mdf-margin-sm mdf-paddingY-xx">
+            <div className="document-wrapper mdf-bg-content mdf-paddingY-xx">
                 <div className="document-content">
                     {children}
                 </div>

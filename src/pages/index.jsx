@@ -95,7 +95,7 @@ export default function IndexPage() {
     }
 
     const cellEditor = (options) => {
-        return <InputText type="number" className="p-inputtext-sm" value={options.value} onChange={(e) => options.editorCallback(e.target.value)} style={{ width: '80px' }} />
+        return <InputText type="number" className="p-inputtext-sm" value={options.value} onChange={(e) => options.editorCallback(e.target.value)} style={{ width: '80px' }} autoFocus />
     }
 
     return (
@@ -107,7 +107,7 @@ export default function IndexPage() {
 
             <h3 className="mdf-font-400 mdf-marginB-sm">Ganancia: ${currencyFormat(totalAmount - totalInvestment)}</h3>
             <p className="mdf-font-400 mdf-marginB-sm">Inversión: ${currencyFormat(totalInvestment)}</p>
-            <h3 className="mdf-font-400 mdf-marginB-xx">Monto total: ${currencyFormat(totalAmount)}</h3>
+            <h3 className="mdf-font-600 mdf-marginB-xx">Monto total: ${currencyFormat(totalAmount)}</h3>
 
             <DataTable value={selectedProducts} emptyMessage="Selecciona los elementos que deseas" >
                 <Column field="quantity" header="Cantidad" editor={(options) => cellEditor(options)} onCellEditComplete={onCellEditComplete} style={{ width: '10%', textAlign: 'center' }} ></Column>
@@ -115,6 +115,10 @@ export default function IndexPage() {
                 <Column field="price" header="Precio" style={{ width: '10%' }} ></Column>
                 <Column field="amount" header="Monto" style={{ width: '10%' }} ></Column>
             </DataTable>
+
+            <h3 className="mdf-font-400 mdf-marginB-sm">Ganancia: ${currencyFormat(totalAmount - totalInvestment)}</h3>
+            <p className="mdf-font-400 mdf-marginB-sm">Inversión: ${currencyFormat(totalInvestment)}</p>
+            <h3 className="mdf-font-600 mdf-marginB-xx">Monto total: ${currencyFormat(totalAmount)}</h3>
 
             <Dialog header="Listado de servicios" visible={visible} onHide={() => setVisible(false)} position="top" resizable={false} draggable={false} style={{ width: '95%', maxWidth: '1000px' }}>
                 <input type="text" value={globalFilterValue} onChange={onGlobalFilterChange} placeholder="Ingrese su búsqueda..." className="mdf-item-height mdf-paddingX-lg mdf-rounded-xx mdf-bg-screen mdf-width-80 mdf-marginB-xx" style={{ maxWidth: '500px' }} />
