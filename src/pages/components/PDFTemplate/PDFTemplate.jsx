@@ -71,7 +71,7 @@ export default function PDFTemplate({ items, totalAmount }) {
                     </thead>
                     <tbody className="mdf-borderB-md mdf-border-content">
                         {items?.map((item) => (
-                            <tr>
+                            <tr key={item.name}>
                                 <td className="mdf-paddingX-sm mdf-paddingY-sm mdf-font-center">{item.quantity}</td>
                                 <td className="mdf-paddingX-sm mdf-paddingY-sm mdf-width-70">{item.name}</td>
                                 <td className="mdf-paddingX-sm mdf-paddingY-sm mdf-font-right">${currencyFormat(item.price)}</td>
