@@ -64,9 +64,10 @@ export default function IndexPage() {
 
             let quantity = item.quantity ? parseInt(item.quantity, 10) : 1
             let amount = quantity * item.price
+            let inversment = quantity * item.cost
 
             totalAmount = totalAmount + amount
-            totalInvestment = totalInvestment + item.cost
+            totalInvestment = totalInvestment + inversment
 
             return {
                 quantity: quantity,
