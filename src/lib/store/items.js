@@ -298,5 +298,5 @@ export const items = [
 ]
 
 export const config = {
-    percentage: 25
+    percentage: 20
 }
