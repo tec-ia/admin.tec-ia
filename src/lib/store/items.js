@@ -256,6 +256,21 @@ export const items = [
 
 
     {
+        category: "videovigilancia",
+        url: "https://www.dhmex.com/Marketplace/DetalleProducto.aspx?sku=IPC-F22N-D-0280B-IMOU&idProducto=54161",
+        name: "Camara Ip Wifi Imou Bullet 2mp + audio + ranura MICROSD",
+        cost: "573",
+    },
+    {
+        category: "videovigilancia",
+        url: "https://www.dhmex.com/Marketplace/DetalleProducto.aspx?sku=IPC-F22N-D-0280B-IMOU&idProducto=54161",
+        name: "Memoria MICROSD 128 GB ADATA",
+        cost: "137",
+    },
+
+
+
+    {
         category: "mantenimiento",
         url: "https://www.tec-ia.com/mantenimiento",
         name: "Reparación de fallas o daños en el equipo",
