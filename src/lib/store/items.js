@@ -263,7 +263,7 @@ export const items = [
     },
     {
         category: "videovigilancia",
-        url: "https://www.dhmex.com/Marketplace/DetalleProducto.aspx?sku=IPC-F22N-D-0280B-IMOU&idProducto=54161",
+        url: "https://www.worldcamdemexico.com/detalles_arreglos.php?ver=AUSDX128GUICL10A1-RA&lg=ADATA%20AUSDX128GUICL10A1-RA1%20MICROSD%20128G",
         name: "Memoria MICROSD 128 GB ADATA",
         cost: "137",
     },
